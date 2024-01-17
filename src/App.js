@@ -1,4 +1,4 @@
-import { Header, Footer } from "./components"
+import { Header} from "./components"
 import { AllRouter } from "./routes/AllRouter"
 import './App.css';
 
@@ -8,8 +8,6 @@ function App() {
     <div className="App">
       <Header />
       <AllRouter/>
-
-
     </div>
   );
 }

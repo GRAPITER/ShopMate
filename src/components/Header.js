@@ -1,8 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import logo from "../assets/logo192.png";
 import './Header.css'
 
 export const Header = () => {
+  const {cartList} = useCart()
   return (
     <header className="nav flex justify-between max-w-7xl m-auto items-center h-24 border-b-2 flex-wrap mb-6 ">
 
@@ -23,7 +25,7 @@ export const Header = () => {
 
       <Link to="/cart" className="text-xl font-medium">
 
-        <p>Cart: 2</p>
+        <p>Cart:{cartList.length}</p>
 
       </Link>
     </header>
